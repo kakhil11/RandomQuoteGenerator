@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANDOM QUOTE GENERATOR</title>
+    <style>
+        #one{
+            
+            border: 2px solid  black;
+            height: 450px;
+            width: 450px;
+            margin-top: 60px;
+            background-color: #f5deb3;
+        }
+        #button{
+            background-color: rgb(7, 250, 169);
+            margin-top: 40px;
+            width: 120px;
+            height: 50px;
+            font-size: large;
+            color: white;
+        }
+        body{
+            background-color:  #deb887 ;
+        }
+        #quote{
+            padding: 0 20px 5px 20px;
+            font-size:xxx-large;
+        }
+        #Auother{
+            text-align: right;
+            font-size: xx-large;
+            margin-bottom: 50px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+<center> 
+<div id="one">
+<button id="button" onclick="random()">New Quote</button>
+<p id="quote">"If you cannot overcome fear you cannot suceed in Life ... "</p>
+<p id="Auother">Edrwick</p>
+</div>
+</center>   
+
+ <script>
+    function random(){
+    
+     let quotes=[ { Quote:"It is during our darkest moments that we must focus to see the light.",Auother :"-Aristotle"},{Quote:"Whoever is happy will make others happy too.",Auother:"-AnneFrank"},{Quote: "Only a life lived for others is a life worthwhile.",Auother:" -AlbertEinstein"}, {Quote:"The purpose of our lives is to be happy.",Auother:"-DalaiLama"},{Quote:"Life is what happens when you're busy making other plans.",Auother:" -JohnLennon"},{Quote:"You only live once, but if you do it right once is enough.",Auother:"-MaeWest"}, {Quote:"May you live all the days of your life.",Auother:" -JonathanSwift"},{Quote:"Life is ours to be spent, not to be saved.",Auother:"-D. H. Lawrence"},{Quote:"Love the life you live. Live the life you love.",Auother:"-BobMarley"}]
+     let index=(Math.floor(Math.random()* quotes.length)) 
+     document.getElementById("quote").innerHTML=quotes[index].Quote //a[index]
+     document.getElementById("Auother").innerHTML=quotes[index].Auother
+   
+    }
+
+ </script>   
+</body>
+</html>
